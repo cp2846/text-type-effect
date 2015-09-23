@@ -17,7 +17,9 @@ Every time a link is printed, it moves to the next link in the array.
 COLORS:
 
 $g(text here)/c -- draws GREEN text
+
 $r(text here)/c -- draws RED text
+
 $b(text here)/c -- draws GREEN text
 
 etc...
