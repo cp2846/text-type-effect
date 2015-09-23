@@ -10,14 +10,14 @@ Links:
 
 The code contains an array to which links can be added. To print a link, use the following syntax:
 
-$l<text here>/l
+$l(text here)/l
 
 Every time a link is printed, it moves to the next link in the array. 
 
 COLORS:
 
-$g<text here>/c -- draws GREEN text
-$r<text here>/c -- draws RED text
-$b<text here>/c -- draws GREEN text
+$g(text here)/c -- draws GREEN text
+$r(text here)/c -- draws RED text
+$b(text here)/c -- draws GREEN text
 
 etc...
