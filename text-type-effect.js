@@ -37,7 +37,7 @@ function type() {
 			setTimeout("type()",1000);
 		
 		//proceed normally.
-		} else if (text.length >= currentChar{
+		} else if (text.length >= currentChar){
 			setTimeout("type()",delay);
 		} 
 	}
