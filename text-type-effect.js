@@ -132,7 +132,7 @@ function type(destination) {
 		//PROCEED NORMALLY
 		} else if (text.length >= currentChar){
 			setTimeout("type(dest)",delay);
-
+		}
 		
 	}
 }
