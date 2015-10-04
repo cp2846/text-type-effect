@@ -39,11 +39,11 @@ function type(destination) {
 	if (document.getElementById) {
 				
 		//LINE BREAKS
-		if (text[currentChar-1] == " " && text[currentChar] == " "){
+		if (text[currentChar-1] === " " && text[currentChar] === " "){
 			destination.innerHTML += "<br>";
 			
 		//LINK HANDLING
-		} else if (text[currentChar-1] == "$" && text[currentChar] == "l"){
+		} else if (text[currentChar-1] === "$" && text[currentChar] === "l"){
 			destination.innerHTML += "<a href = \""+links[currentLink]+"\" id = "+currentId.toString()+">";
 			destination = document.getElementById("dest"+currentId.toString());
 			//increment values
@@ -51,7 +51,7 @@ function type(destination) {
 			currentLink++;
 			currentChar++;
 		//END LINK
-		} else if (text[currentChar-1] == "/" && text[currentChar] == "l") {
+		} else if (text[currentChar-1] === "/" && text[currentChar] === "l") {
 			specialMode = 0;
 			currentId++;
 			currentChar++;
@@ -62,20 +62,20 @@ function type(destination) {
 		*/
 
 		//GREEN
-		else if (text[currentChar-1] == "$" && text[currentChar] == "g") {
+		else if (text[currentChar-1] === "$" && text[currentChar] === "g") {
 			
 			destination.innerHTML += "<span style = \"color:green\" id = "+currentId.toString()+">";
 			specialMode = 1;
 			currentChar++;
 		}
 		//RED
-		else if (text[currentChar-1] == "$" && text[currentChar] == "r") {
+		else if (text[currentChar-1] === "$" && text[currentChar] === "r") {
 			destination.innerHTML += "<span style = \"color:red\" id = "+currentId.toString()+">";
 			specialMode = 1;
 			currentChar++;
 		}
 		//BLUE
-		else if (text[currentChar-1] == "$" && text[currentChar] == "b") {
+		else if (text[currentChar-1] === "$" && text[currentChar] === "b") {
 			destination.innerHTML += "<span style = \"color:blue\" id = "+currentId.toString()+">";
 			specialMode = 1;
 			currentChar++;
@@ -91,7 +91,7 @@ function type(destination) {
 		
 		
 		//END COLOR
-		else if (text[currentChar-1] == "/" && text[currentChar] == "c") {
+		else if (text[currentChar-1] === "/" && text[currentChar] === "c") {
 			
 			specialMode = 0;
 			currentChar++;
@@ -114,16 +114,16 @@ function type(destination) {
 		
 		
 		//CURRENTLY TYPING LINK OR COLORED TEXT
-		if (specialMode == 1){
+		if (specialMode === 1){
 			setTimeout("type(currentId)",delay);
 		}
 		
 		//when character is a comma, pause for a bit so that the text has a more natural flow to it.
-		else if (text[currentChar-2] == "," ){
+		else if (text[currentChar-2] === "," ){
 			setTimeout("type(dest)",500);
 			
 		//PAUSE AFTER LINE BREAKS
-		} else if (text[currentChar-1] == " " && text[currentChar] == " ") {
+		} else if (text[currentChar-1] === " " && text[currentChar] === " ") {
 			destination.innerHTML += "<br>";
 			currentChar++;
 			setTimeout("type(dest)",1000);
@@ -139,5 +139,7 @@ function type(destination) {
 
 // EXAMPLE FUNCTION CALL:
 type(dest);
+
+
 
 
